@@ -49,15 +49,19 @@ for i in range (len(menu)):
     
 
 # user input
+# x=input('>').lower()
+# print(x)
+
 the_order=input('>')
 # check if order on menu
 while the_order!="quit":
-    if the_order in menu:
+    if the_order.lower() in menu:
         # target index of order 
-        index_of_item=menu.index(the_order) 
+        index_of_item=menu.index(the_order.lower()) 
         count[index_of_item]+=1
         print(f"** {count[index_of_item]} order of {the_order} have been added to your meal **")
     else:
         print("please choose from menu")
     the_order=input('>')
 print("Thank You for your visit")
+
